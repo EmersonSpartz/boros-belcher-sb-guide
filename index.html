@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<title>Boros Belcher SB Guide</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #0d0d0d; color: #e0e0e0; font-size: 14px; }
+.top-bar { background: #1a0d0a; padding: 14px 16px 10px; border-bottom: 1px solid #3a2218; position: sticky; top: 0; z-index: 20; }
+.top-bar h1 { font-size: 16px; font-weight: 700; color: #e09060; letter-spacing: 0.3px; }
+.top-bar .subtitle { font-size: 11px; color: #806050; margin-top: 2px; }
+.mu { border-bottom: 1px solid #181818; }
+.mu-head { display: flex; align-items: center; padding: 13px 16px; cursor: pointer; -webkit-tap-highlight-color: transparent; user-select: none; gap: 10px; }
+.mu-head:active { background: #161616; }
+.mu-name { flex: 1; font-size: 15px; font-weight: 600; color: #e8e8e8; }
+.chev { color: #333; font-size: 11px; transition: transform 0.18s; }
+.mu.open .chev { transform: rotate(180deg); }
+.mu-body { display: none; padding: 0 12px 14px; }
+.mu.open .mu-body { display: block; }
+.gc { background: #141414; border: 1px solid #1f1f1f; border-radius: 7px; margin-bottom: 8px; overflow: hidden; }
+.gc-head { background: #191919; padding: 7px 11px; }
+.gc-author { font-size: 12px; font-weight: 600; }
+.gc-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 9px 11px; }
+.col-head { font-size: 10px; font-weight: 700; letter-spacing: 0.8px; text-transform: uppercase; margin-bottom: 5px; }
+.col-in .col-head { color: #4caf6b; }
+.col-out .col-head { color: #e05a5a; }
+.c { font-size: 12px; padding: 2px 0; line-height: 1.45; }
+.c.in { color: #b8e8c8; }
+.c.out { color: #f5b8b8; }
+.c .q { font-weight: 700; font-size: 11px; color: #e05a5a; margin-right: 3px; }
+.c .qi { font-weight: 700; font-size: 11px; color: #4caf6b; margin-right: 3px; }
+.gc-note { padding: 6px 11px 8px; border-top: 1px solid #1a1a1a; font-size: 11px; color: #888; font-style: italic; line-height: 1.5; }
+</style>
+</head>
+<body>
+<div class="top-bar">
+  <h1>Boros Belcher SB Guide</h1>
+  <div class="subtitle">Sodek (grid) / Togores / Mikedevo</div>
+</div>
+
+<div class="mu open">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Boros Energy</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Blood Moon</div>
+          <div class="c in"><span class="qi">2</span>Pyroclasm</div>
+          <div class="c in"><span class="qi">1</span>Shattering Spree</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">4</span>Orim's Chant</div>
+          <div class="c out"><span class="q">1</span>March of Reckless Joy</div>
+          <div class="c out"><span class="q">1</span>Manamorphose</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Jeskai Blink</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">2</span>Wear//Tear</div>
+          <div class="c in"><span class="qi">2</span>Shattering Spree</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">2</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">1</span>Strike It Rich</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">2</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c08070">Mikedevo</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Spider-Man (Spider-punk)</div>
+          <div class="c in">Blood Moon</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">Ragavan</div>
+          <div class="c out">Strike It Rich</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Affinity</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">2</span>Wear//Tear</div>
+          <div class="c in"><span class="qi">2</span>Shattering Spree</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">1</span>Orim's Chant</div>
+          <div class="c out"><span class="q">4</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Esper Blink</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">3</span>Blood Moon</div>
+          <div class="c in"><span class="qi">1</span>Wear//Tear</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">4</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Domain Zoo</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">2</span>Wear//Tear</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">2</span>Orim's Chant</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Goryo's Vengeance / Reanimator</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek (Goryo)</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">3</span>Blood Moon</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">2</span>Talisman of Conviction</div>
+          <div class="c out"><span class="q">1</span>Legion Leadership</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#e09060">Togores</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Silence</div>
+          <div class="c in">Blood Moon</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">4</span>Strike It Rich</div>
+          <div class="c out">2 of 4 Talisman of Conviction</div>
+        </div>
+      </div>
+      <div class="gc-note">OTP. <strong>OTD:</strong> 2 of 4 Strike It Rich, 4 Talisman of Conviction.</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Eldrazi Tron</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Wear//Tear</div>
+          <div class="c in"><span class="qi">2</span>Pyroclasm</div>
+          <div class="c in"><span class="qi">1</span>Static Prison</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">4</span>Orim's Chant</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Eldrazi Ramp</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Blood Moon</div>
+          <div class="c in"><span class="qi">3</span>Wear//Tear</div>
+          <div class="c in"><span class="qi">1</span>Mountain</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">4</span>Orim's Chant</div>
+          <div class="c out"><span class="q">1</span>March of Reckless Joy</div>
+          <div class="c out"><span class="q">1</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Belcher (Red) — mirror</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">2</span>Blood Moon</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">2</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">1</span>Desperate Ritual</div>
+          <div class="c out"><span class="q">1</span>Irencrag Feat</div>
+          <div class="c out"><span class="q">1</span>Manamorphose</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#e09060">Togores</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Silence</div>
+          <div class="c in">Wear//Tear</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">Irencrag Feat (bad vs Orim's Chant)</div>
+          <div class="c out">2 of 4 Manamorphose</div>
+        </div>
+      </div>
+      <div class="gc-note">Boros Belcher mirror</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Belcher (Blue)</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Amulet Titan</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Wear//Tear</div>
+          <div class="c in"><span class="qi">2</span>Pyroclasm</div>
+          <div class="c in"><span class="qi">1</span>Static Prison</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">1</span>Orim's Chant</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">2</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Ruby Storm</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#e09060">Togores</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Vexing Bauble</div>
+          <div class="c in">1 Defense Grid</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">Blood Moon</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Living End (Bant)</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">1</span>Shattering Spree</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Orim's Chant</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Living End (Sultai)</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Broodscale Combo</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Blood Moon</div>
+          <div class="c in"><span class="qi">3</span>Wear//Tear</div>
+          <div class="c in"><span class="qi">2</span>Shattering Spree</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">4</span>Orim's Chant</div>
+          <div class="c out"><span class="q">1</span>March of Reckless Joy</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. UB Midrange / Dimir Midrange</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek (UB Midrange)</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">3</span>Blood Moon</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">4</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#e09060">Togores (Dimir Midrange)</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Silence</div>
+          <div class="c in">Blood Moon</div>
+          <div class="c in">Erode</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">Manamorphose</div>
+          <div class="c out">Pyretic Ritual</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Izzet Prowess / Prowess</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Orim's Chant</div>
+          <div class="c out"><span class="q">1</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#e09060">Togores</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Defense Grid</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">2 of 4 Manamorphose</div>
+          <div class="c out">Blood Moon</div>
+        </div>
+      </div>
+      <div class="gc-note">NO Pyroclasm</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Storm</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Strike It Rich</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Grixis Reanimator</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#e09060">Togores</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Defense Grid</div>
+          <div class="c in">Guttural Response</div>
+          <div class="c in">Vexing Bauble (??)</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">Blood Moon</div>
+          <div class="c out">Manamorphose</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Grixis Control</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c08070">Mikedevo</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Spider-Man (Spider-punk)</div>
+          <div class="c in">Blood Moon</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">Ragavan</div>
+          <div class="c out">Irencrag Feat</div>
+        </div>
+      </div>
+      <div class="gc-note">They have counters</div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Simic Ritual</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c08070">Mikedevo</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">Spider-Man (Spider-punk)</div>
+          <div class="c in">Mountain</div>
+          <div class="c in">Pyroclasm</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">Ragavan</div>
+          <div class="c out">Irencrag Feat</div>
+          <div class="c out">Blood Moon</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. UGx Ritual</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Strike It Rich</div>
+          <div class="c out"><span class="q">2</span>Manamorphose</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Yawgmoth</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">2</span>Shattering Spree</div>
+          <div class="c in"><span class="qi">1</span>Pyroclasm</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">3</span>Orim's Chant</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Jeskai Chant</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">3</span>Blood Moon</div>
+          <div class="c in"><span class="qi">2</span>Wear//Tear</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">1</span>Desperate Ritual</div>
+          <div class="c out"><span class="q">4</span>Manamorphose</div>
+          <div class="c out"><span class="q">2</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Neobrand</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Silence</div>
+          <div class="c in"><span class="qi">3</span>Blood Moon</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">1</span>Orim's Chant</div>
+          <div class="c out"><span class="q">3</span>Manamorphose</div>
+          <div class="c out"><span class="q">1</span>Talisman of Conviction</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. RW Land Destruction</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">3</span>Wear//Tear</div>
+          <div class="c in"><span class="qi">1</span>Static Prison</div>
+          <div class="c in"><span class="qi">1</span>Mountain</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">4</span>Stormscale Scion</div>
+          <div class="c out"><span class="q">1</span>Manamorphose</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Cosmogoyf</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in"><span class="qi">1</span>Static Prison</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out"><span class="q">1</span>Orim's Chant</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="mu">
+  <div class="mu-head" onclick="this.parentElement.classList.toggle('open')">
+    <span class="mu-name">vs. Dredge</span><span class="chev">&#9660;</span>
+  </div>
+  <div class="mu-body">
+    <div class="gc">
+      <div class="gc-head"><span class="gc-author" style="color:#c0a050">Sodek</span></div>
+      <div class="gc-cols">
+        <div class="col-in"><div class="col-head">IN</div>
+          <div class="c in">(no changes)</div>
+        </div>
+        <div class="col-out"><div class="col-head">OUT</div>
+          <div class="c out">(no changes)</div>
+        </div>
+      </div>
+      <div class="gc-note">0 in / 0 out</div>
+    </div>
+
+  </div>
+</div>
+
+<script></script>
+</body>
+</html>
